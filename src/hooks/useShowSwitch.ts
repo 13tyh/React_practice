@@ -1,6 +1,11 @@
 import {useState} from "react";
 
-export const useShowSwitch = () => {
+type UseShowSwitch = {
+  isShow: boolean;
+  handleShowSwitch: () => void;
+};
+
+export const useShowSwitch = (): UseShowSwitch => {
   const [isShow, setIsShow] = useState(true);
   const handleShowSwitch = () => {
     setIsShow(!isShow);
