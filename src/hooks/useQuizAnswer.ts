@@ -1,8 +1,23 @@
 import {useState} from "react";
 
-const CORRECT_ANSWER = "ライブラリ";
+export const CORRECT_ANSWER = "ライブラリ";
+export const QUESTIONS: string = "Reactはどのようなものですか？";
+export const CHOICES: string[] = [
+  "ライブラリ",
+  "フレームワーク",
+  "プログラミング言語",
+  "データベース",
+  "サーバー",
+];
 
-export const useQuizAnswer = () => {
+type QuizAnswer = {
+  selectedAnswer: string;
+  handleSelect: (choice: string) => void;
+  handleSubmit: () => void;
+  result: string;
+};
+
+export const useQuizAnswer = (): QuizAnswer => {
   const [selectedAnswer, setSelectedAnswer] = useState<string>("");
   const [result, setResult] = useState<string>("");
   const handleSelect = (choice: string) => {

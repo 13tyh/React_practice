@@ -2,16 +2,7 @@
 
 import {Button} from "@/components/ui/button";
 import React from "react";
-import {useQuizAnswer} from "@/hooks/useQuizAnswer";
-
-const QUESTIONS: string = "Reactはどのようなものですか？";
-const CHOICES: string[] = [
-  "ライブラリ",
-  "フレームワーク",
-  "プログラミング言語",
-  "データベース",
-  "サーバー",
-];
+import {CHOICES, QUESTIONS, useQuizAnswer} from "@/hooks/useQuizAnswer";
 
 const Practice8 = () => {
   const {selectedAnswer, handleSelect, handleSubmit, result} = useQuizAnswer();
