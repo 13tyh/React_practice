@@ -41,10 +41,12 @@ export const useDiaryApp = () => {
   };
 
   const filteredDiaries = useMemo(() => {
-    return diaries.filter(
-      (diary) =>
-        diary.date.toLocaleDateString() === filterDate?.toLocaleDateString()
-    );
+    return filterDate
+      ? diaries.filter(
+          (diary) =>
+            diary.date.toLocaleDateString() === filterDate.toLocaleDateString()
+        )
+      : diaries;
   }, [diaries, filterDate]);
 
   return {
