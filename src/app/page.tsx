@@ -1,5 +1,5 @@
-import Practice19 from "./components/Practice19";
+import Practice20 from "./components/Practice20";
 
 export default function Home() {
-  return <Practice19 />;
+  return <Practice20 />;
 }
