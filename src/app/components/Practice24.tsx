@@ -2,7 +2,7 @@
 "use client";
 
 import {useStore} from "@/store/useStore"; // Zustand ストアのインポート
-import {Button} from "../../components/ui/button"; // Chakra UI のコンポーネント
+import {Button} from "../../components/ui/button";
 
 const SomeComponent = () => {
   const {counters, increase, decrease} = useStore();
